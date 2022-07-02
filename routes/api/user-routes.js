@@ -15,16 +15,16 @@ router
   .get(getAllUsers)
   .post(createUser);
 
-// /api/users/:id
+// /api/users/:userId
 router
-  .route('/:id')
+  .route('/:userId')
   .get(getUserById)
   .put(updateUser)
   .delete(deleteUser);
 
-// /api/users/:id/friends/:id
+// /api/users/:userId/friends/:friendsId
 router
-  .route('/:id/friends/:id')
+  .route('/:userId/friends/:friendsId')
   .post(addFriend)
   .delete(removeFriend)
 
