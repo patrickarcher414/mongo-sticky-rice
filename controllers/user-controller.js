@@ -1,7 +1,6 @@
 const { User } = require('../models');
 
 const userController = {
-  // get all users
   getAllUsers(req, res) {
     User.find({})
       .populate({
@@ -59,9 +58,20 @@ const userController = {
       .catch(err => res.json(err));
   },
 
-  // delete user
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
+      .then(dbUserData => res.json(dbUserData))
+      .catch(err => res.json(err));
+  },
+
+  addFriend({ body }, res) {
+    User.friends.create(body)
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => res.json(err));
+  },
+
+  removeFriend({ params }, res) {
+    User.friends.findOneAndDelete({ _id: params.id })
       .then(dbUserData => res.json(dbUserData))
       .catch(err => res.json(err));
   }
