@@ -1,0 +1,24 @@
+{
+  "name": "mongo-sticky-rice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickarcher414/mongo-sticky-rice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickarcher414/mongo-sticky-rice/issues"
+  },
+  "homepage": "https://github.com/patrickarcher414/mongo-sticky-rice#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.2"
+  }
+}
