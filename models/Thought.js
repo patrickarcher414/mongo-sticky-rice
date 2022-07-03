@@ -21,20 +21,11 @@ const ReactionSchema = new Schema(
       default: Date.now,
       get: createdAtVal => dateFormat(createdAtVal)
     }
-  },
-  {
-    toJSON: {
-      getters: true
-    }
   }
 );
 
 const ThoughtSchema = new Schema(
   {
-    thoughtId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId()
-    },
     thoughtText: {
       type: String,
       required: true,
